@@ -1,14 +1,21 @@
 import React from "react";
+
+import CONST from '../data/constants';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay, faPlus } from "@fortawesome/free-solid-svg-icons";
 import Score from "./Score";
 import placeholder from "../Assets/header.jpg";
-import { faPlay, faPlus } from "@fortawesome/free-solid-svg-icons";
 
-const Hero = ({ title = "Avengers Endgame", score = 10 }) => (
+
+const Hero = ({ backdrop_path = null, title = "Avengers Endgame", vote_avarege = 10}) => {
+  const {IMAGEURL} = CONST;
+
+  return(
   <header className="box-border relative min-h-screen -mb-32">
     <img
       className="object-cover object-center h-auto w-full"
-      src={placeholder}
+      src={backdrop_path ? `${IMAGEURL}/original/${backdrop_path}` : placeholder}
       alt="Filme em destaque"
     />
 
@@ -19,7 +26,7 @@ const Hero = ({ title = "Avengers Endgame", score = 10 }) => (
       <h2 className="text-6xl font-bold">{title}</h2>
       <p className="text-xl">
         Nota{}
-        <Score value={score} />
+        <Score value={vote_avarege} />
       </p>
       <button className="py-1 px-8 mr-3 mt-6  bg-black bg-opacity-50 rounded-md text-xl transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:bg-opacity-75">
         <FontAwesomeIcon className="mr-3" icon={faPlay} />
@@ -31,6 +38,6 @@ const Hero = ({ title = "Avengers Endgame", score = 10 }) => (
       </button>
     </article>
   </header>
-);
+)};
 
 export default Hero;
