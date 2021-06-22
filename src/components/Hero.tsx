@@ -8,7 +8,7 @@ import Score from "./Score";
 import placeholder from "../Assets/header.jpg";
 
 
-const Hero = ({ backdrop_path = null, title = "Avengers Endgame", vote_avarege = 10}) => {
+const Hero = ({ backdrop_path = null, title = "Avengers Endgame", vote_average = 10}) => {
   const {IMAGEURL} = CONST;
 
   return(
@@ -26,7 +26,7 @@ const Hero = ({ backdrop_path = null, title = "Avengers Endgame", vote_avarege =
       <h2 className="text-6xl font-bold">{title}</h2>
       <p className="text-xl">
         Nota{}
-        <Score value={vote_avarege} />
+        <Score value={vote_average} />
       </p>
       <button className="py-1 px-8 mr-3 mt-6  bg-black bg-opacity-50 rounded-md text-xl transition-all duration-300 ease-in-out hover:bg-white hover:text-black hover:bg-opacity-75">
         <FontAwesomeIcon className="mr-3" icon={faPlay} />

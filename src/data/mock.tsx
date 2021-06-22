@@ -4,59 +4,61 @@ import cover2 from "../Assets/movie2.jpg";
 import cover3 from "../Assets/movie3.jpg";
 
 export interface mockMovie {
-    title: string;
-    cover: string;
-    score?: number | string;
+    title?: string;
+    original_name?:string;
+    poster_path?: string;
+    cover?: string;
+    vote_average?: number | string;
 }
 
 const mockData: mockMovie[] = [
   {
     title: "Avengers",
-    cover: cover1,
+   cover: cover1,
   },
   {
     title: "Missão Impossivel",
-    cover: cover2,
+   cover: cover2,
   },
   {
     title: "Mega tubarão",
-    cover: cover3,
+   cover: cover3,
   },
   {
     title: "Avengers",
-    cover: cover1,
+   cover: cover1,
   },
   {
     title: "Missão Impossivel",
-    cover: cover2,
+   cover: cover2,
   },
   {
     title: "Mega tubarão",
-    cover: cover3,
+   cover: cover3,
   },
   {
     title: "Avengers",
-    cover: cover1,
+   cover: cover1,
   },
   {
     title: "Missão Impossivel",
-    cover: cover2,
+   cover: cover2,
   },
   {
     title: "Mega tubarão",
-    cover: cover3,
+   cover: cover3,
   },
   {
     title: "Avengers",
-    cover: cover1,
+   cover: cover1,
   },
   {
     title: "Missão Impossivel",
-    cover: cover2,
+   cover: cover2,
   },
   {
     title: "Mega tubarão",
-    cover: cover3,
+   cover: cover3,
   },
 ];
 

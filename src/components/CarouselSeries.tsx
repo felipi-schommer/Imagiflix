@@ -14,7 +14,7 @@ import './Carousel.css';
 
 
 interface CarouselData {
-  title?: string;
+  title?:string;
   data?: mockMovie[];
 }
 
