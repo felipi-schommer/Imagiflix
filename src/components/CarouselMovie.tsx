@@ -11,11 +11,13 @@ import "./Carousel.css";
 interface CarouselData {
     title?: string;
     data?: mockMovie[];
+     
 }
 
 const CarouselMovie = ({
   title = "Filmes em destaque no imagiflix",
   data = mockData,
+  
 }: CarouselData) => {
 
     enum Direction {
@@ -39,7 +41,7 @@ const CarouselMovie = ({
 
   return (
     <section className='carousel'>
-      <h2 className='relative z-10 font-bold text-2xl ml-8'>{title}</h2>
+      <h2 className='relative  font-bold text-2xl ml-8'>{title}</h2>
       <Slick className="relative" {...options}>
         {data.map((movie, index) => Poster(movie, index))}
       </Slick>
